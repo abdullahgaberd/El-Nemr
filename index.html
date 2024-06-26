@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El-Nemr</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/all.min.css">
+    <link rel="stylesheet" href="style/Media.css">
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+</head>
+<body class="container-fluid'" dir="rtl" style="background-color: #131921;">
+    <div class="crud container-fluid" dir="rtl">
+        <div class="head mb-1">
+            <h2>El-Nemr</h2>
+            <p>ادارة منتجات</p>
+        </div>
+
+        <div class="inputs mb-2">
+            <input placeholder="اسم المنتج" type="text" class="mb-2" id="title">
+            <div class="price mb-1">
+                <input placeholder="الكمية المتاحة" type="number" id="quantity">
+                <input onkeyup="gTotal()" placeholder="السعر" type="number" id="price">
+                <input onkeyup="gTotal()" placeholder="الربح" type="number" id="profit">
+                <input onkeyup="gTotal()" class="mb-1" placeholder="فاتوره الشراء" type="number" id="inside">
+                <input onkeyup="gTotal()" class="mb-1" placeholder="فاتوره البيع" type="number" id="outside">
+                <input onkeyup="gTotal()" placeholder="الخصم" type="number" id="discount">
+                <small id="total"></small>
+            </div>
+            <input class="mb-2" placeholder="الفئة" type="text" id="category">
+            <input class="mb-2" placeholder="كم عدد المنتجات التي تريد انشائها" type="number" id="count">
+            <input class="mb-2" placeholder="التاريخ" type="date" id="dateM">
+            <button id="submit">اضافة المنتج</button>
+        </div>
+        <div class="outputs">
+            <div class="searchBlock mb-2">
+                <input onkeyup="searchData(this.value)" class="mb-2" type="text" id="search" placeholder="البحث">
+                <div class="btnSearch">
+                    <button onclick="getsearchMood(this.id)" id="searchTitle">البحث بالاسم</button>
+                    <button onclick="getsearchMood(this.id)" id="searchCategory">البحث بالفئة</button>
+                </div>
+            </div>
+            <div id="deleteAll">
+            
+            </div>
+            <table class="tablee table-secondary ">
+                <tr>
+                    <th>
+                        العنوان
+                    </th>
+                    <th>
+                        اسم المنتج
+                    </th>
+                    <th>
+                        الكمية المتاحة
+                    </th>
+                    <th>
+                        السعر
+                    </th>
+                    <th>
+                        الربح
+                    </th>
+                    <th>
+                        فاتوره الشراء
+                    </th>
+                    <th>
+                        فاتوره البيع
+                    </th>
+                    <th>
+                        الخصم
+                    </th>
+                    <th>
+                        المجموع
+                    </th>
+                    <th>
+                        الفئة
+                    </th>
+                    <th>
+                        التاريخ
+                    </th>
+                    <th>
+                        التعديل
+                    </th>
+                    <th>
+                        الحذف
+                    </th>
+                </tr>
+                <tbody id="tbody">
+                </tbody>                
+            </table>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

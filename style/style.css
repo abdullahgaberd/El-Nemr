@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 1.4em;
+}
+.crud {
+    width: 80%;
+    margin: auto;
+    color: #fff;
+    direction: rtl;
+}
+.head {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+input {
+    width: 100%;
+    height: 30px;
+    outline: 0;
+    border: 1px solid gray;
+    color: black;
+    margin: 4px 0;
+    border-radius: 4px;
+    padding: 4px;
+    text-align: center;
+}
+input:focus {
+    background-color: rgba(128, 128, 128, 0.548);
+    color: #fff;
+    transition: .4s;
+}
+.price input {
+    width: 13.5%;
+}
+.crud #total {
+    background: #a00c02;
+    color: #ffffff;
+    padding: 5px 2px;
+    border-radius: 4px;
+}
+
+#total::before {
+    content: 'المجموع : ';
+}
+button {
+    width: 100%;
+    height: 30px;
+    border: 0;
+    cursor: pointer;
+    background-color: #fff;
+    font-size: 1em;
+    font-family: sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    height: 40px;
+    color: grey;
+    border-radius: 5px;
+}
+button:hover {
+    background-color: transparent;
+    transition: .5s;
+    color: #fff;
+    border: 1px solid gray;
+    letter-spacing: 3px;
+}
+.btnSearch
+{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 8px;
+}
+.btnSearch button
+{
+    width: 45%;
+    align-items: center;
+    text-align: center;
+}
+#deleteAll {
+    margin: 10px 0;
+}
+
+/* tablee */
+.crud .outputs .tablee {
+    width: 100%;
+    text-align: center;
+    background-color: #fff;
+    border: 0;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+.crud .outputs .tablee tbody #update, .crud .outputs .tablee tbody #delete{
+    background-color: transparent;
+    border: 1px solid #131921;
+    border-radius: 4px;
+    color: grey;
+}
+.crud .outputs .tablee tbody #update:hover, .crud .outputs .tablee tbody #delete:hover{
+    background-color: #131921;
+    letter-spacing: normal;
+    color: #fff;
+    border: none;
+}
+th,td {
+    padding: 5px;
+}
